@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CustomerMainNotificationFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_extra_small"
+                android:gravity="center"
+                >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/your_business_menu_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:cardCornerRadius="@dimen/border_medium"
+                        app:cardElevation="@dimen/elevation_large">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_menu_card_bubble_background"
+                            android:padding="@dimen/padding_small">
+
+                            <!-- Title -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your Business"
+                                android:textColor="@color/textPrimary"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/font_size_medium"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:shadowColor="@color/colorTertiary"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="3"
+                                android:letterSpacing="0.1"
+                                android:lineSpacingExtra="2dp"
+                                android:gravity="center" />
+
+                            <!-- Icon -->
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@mipmap/menu_business"
+                                android:contentDescription="Icon" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vehicles_menu_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:cardCornerRadius="@dimen/border_medium"
+                        app:cardElevation="@dimen/elevation_large">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_menu_card_bubble_background"
+                            android:padding="@dimen/padding_small">
+
+                            <!-- Title -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicles"
+                                android:textColor="@color/textPrimary"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/font_size_medium"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:shadowColor="@color/colorTertiary"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="3"
+                                android:letterSpacing="0.1"
+                                android:lineSpacingExtra="2dp"
+                                android:gravity="center" />
+
+                            <!-- Icon -->
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@mipmap/menu_motorcycle"
+                                android:contentDescription="Icon" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_extra_small"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bookings_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bookings"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_bookings"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/invoices_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invoices"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_invoice"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_extra_small"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/customers_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customers"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_customers"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/wallet_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wallet"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_wallet"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_extra_small"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ledger_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ledger"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_ledger"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/reports_menu_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="@dimen/border_medium"
+                    app:cardElevation="@dimen/elevation_large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_menu_card_bubble_background"
+                        android:padding="@dimen/padding_small">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reports"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_medium"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:shadowColor="@color/colorTertiary"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:gravity="center" />
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/menu_reports"
+                            android:contentDescription="Icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+</FrameLayout>

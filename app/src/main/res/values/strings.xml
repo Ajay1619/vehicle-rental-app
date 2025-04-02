@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Vehicle Rental App</string>
+    <string name="title_activity_main">activity_main</string>
+    <string name="login_curved_background_image_content_description">Curved background image</string>
+    <string name="login_card_fragment_content_description">Fragment Card background</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Login_welcome_msg">Welcome to Vehicle Rental App</string>
+    <string name="Login_welcome_msg_desc">Please Login To Continue</string>
+    <string name="Login_title">Login</string>
+    <string name="Login_username_label">Enter Username</string>
+    <string name="Login_password_label">Enter Password</string>
+    <string name="Login_register_here_label">Don\'t have an Account? Register here</string>
+
+    <string name="customer_registeration_personal_title">Personal Info</string>
+
+    <string name="api_url">http://192.168.0.108/vehicle_rental_app/</string>
+
+</resources>

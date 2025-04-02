@@ -1,0 +1,148 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- Card Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_card_background"
+        android:elevation="4dp"
+        android:padding="@dimen/padding_large"
+        android:layout_marginHorizontal="@dimen/margin_large">
+
+
+        <TextView
+            android:id="@+id/loginText"
+            style="@style/TextViewPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Login_title"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username"
+        style="@style/OutlinedInputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/loginText"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:startIconDrawable="@drawable/username_icon"
+        app:startIconTint="@color/colorTertiary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_username_textfield"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Login_username_label"
+                android:padding="@dimen/padding_medium" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password"
+        style="@style/OutlinedInputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/login_username"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:startIconDrawable="@drawable/password_icon"
+        app:startIconTint="@color/colorTertiary"
+        app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password_textfield"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Login_password_label"
+                android:padding="@dimen/padding_medium"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:gravity="center"
+        android:text="@string/Login_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_password" />
+
+        <!-- Register TextView -->
+        <TextView
+        android:id="@+id/Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Login_register_here_label"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_large"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:layout_gravity="center">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@mipmap/login_page_background_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Text under Image -->
+        <TextView
+            android:id="@+id/Welcomemsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Login_welcome_msg"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            style="@style/TextViewPrimary"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"/>
+
+        <!-- Another Text -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Login_welcome_msg_desc"
+            android:textColor="@color/textSecondary"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintTop_toBottomOf="@id/Welcomemsg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary brand colors -->
+    <color name="colorPrimary">#FFC107</color> <!-- Goldish Yellow -->
+    <color name="colorPrimaryVariant">#FFD700</color> <!-- Amber for highlights -->
+    <color name="colorSecondary">#0099FF</color> <!-- Bright Blue -->
+    <color name="colorSecondaryVariant">#007ACC</color> <!-- Darker Blue -->
+    <color name="colorTertiary">#fed800</color>
+    <color name="accentColor">#FFF3B4</color>
+    <!-- Background and surface colors -->
+    <color name="colorBackground">#16202c</color> <!-- Dark Gray -->
+    <color name="colorSurface">#1c2a3a</color> <!-- Darker Surface Gray -->
+
+    <!-- Text colors -->
+    <color name="textPrimary">#FFFFFF</color> <!-- White for main text -->
+    <color name="textSecondary">#B0B0B0</color> <!-- Light Gray for secondary text -->
+    <color name="textDisabled">#6E6E6E</color> <!-- Darker Gray for disabled text -->
+
+    <!-- Badge colors -->
+    <color name="badgeBackground">#333333</color>
+    <color name="badgeText">#FFF8DC</color>
+
+    <!-- Accent colors -->
+    <color name="colorAccent">#50C878</color> <!-- Emerald Green -->
+    <color name="colorError">#FF6E6E</color> <!-- Soft Red -->
+    <color name="colorSuccess">#4CAF50</color> <!-- Bright Green -->
+    <color name="colorWarning">#FFC107</color> <!-- Amber -->
+    <color name="colorInfo">#2196F3</color> <!-- Blue for informational elements -->
+
+    <!-- Divider and borders -->
+    <color name="dividerColor">#292929</color> <!-- Darker Gray for dividers -->
+    <color name="borderColor">#444444</color> <!-- Medium Dark Gray for borders -->
+
+    <!-- Button colors -->
+    <color name="buttonBackground">#FFD700</color> <!-- Primary button background -->
+    <color name="buttonText">#121212</color> <!-- Dark text for buttons -->
+    <color name="buttonDisabledBackground">#292929</color> <!-- Disabled button background -->
+    <color name="buttonDisabledText">#6E6E6E</color> <!-- Disabled button text color -->
+
+    <!-- Toolbar and status bar -->
+    <color name="toolbarColor">#0099FF</color> <!-- Bright Blue -->
+    <color name="statusBarColor">#007ACC</color> <!-- Darker Blue -->
+
+    <!-- Shadows and elevation -->
+    <color name="shadowColor">#000000</color> <!-- Black for shadows with transparency -->
+
+    <!-- Card colors -->
+    <color name="cardBackground">#1E1E1E</color> <!-- Dark Gray background for cards -->
+    <color name="cardBorderColor">#292929</color> <!-- Darker Gray for card borders -->
+
+    <!-- Tab colors -->
+    <color name="tabSelected">#FFD700</color> <!-- Goldish Yellow -->
+    <color name="tabUnselected">#B0B0B0</color> <!-- Light Gray -->
+    <color name="tabIndicator">#FFC107</color> <!-- Amber -->
+
+    <!-- Snackbar colors -->
+    <color name="snackbarBackground">#292929</color> <!-- Very Dark Gray -->
+    <color name="snackbarText">#FFFFFF</color> <!-- White -->
+
+</resources>

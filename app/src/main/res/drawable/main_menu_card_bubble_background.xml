@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorSurface" /> <!-- Light cream color -->
+            <corners android:radius="@dimen/border_small"/>
+        </shape>
+    </item>
+
+    <!-- Half Bubble at Bottom-Right -->
+    <item android:bottom="-80dp" android:top="50dp"  android:left="70dp" android:right="-80dp">
+        <shape android:shape="oval">
+            <size android:width="160dp" android:height="160dp" />
+            <solid android:color="@color/colorTertiary" /> <!-- Semi-transparent yellow -->
+        </shape>
+    </item>
+</layer-list>

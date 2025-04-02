@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@mipmap/bottom_menu_home_icon"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_menu"
+        android:title="Menu"
+        android:icon="@mipmap/bottom_menu_menu_icon"/>
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@mipmap/bottom_menu_notification_icon"
+        android:title="Notifications" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@mipmap/bottom_menu_settings_icon"
+        android:title="Settings" />
+</menu>

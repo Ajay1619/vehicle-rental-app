@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Card Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_card_background"
+        android:elevation="4dp"
+        android:padding="@dimen/padding_large"
+        android:layout_marginHorizontal="@dimen/margin_large">
+
+        <!-- Title Section -->
+        <LinearLayout
+            android:id="@+id/fragment_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/margin_extra_large">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/customer_registeration_icon_background"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/customer_registeration_business_icon" />
+
+            <TextView
+                android:id="@+id/Welcomemsg"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business Info"
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Business Name Field -->
+        <LinearLayout
+            android:id="@+id/business_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/fragment_title"
+            android:layout_marginTop="@dimen/margin_extra_large">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/business_name"
+                style="@style/OutlinedInputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/business_name_textfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Business Name"
+                    android:padding="@dimen/padding_medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Business Register Number Field -->
+        <LinearLayout
+            android:id="@+id/business_register_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/business_name_layout"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/business_register_number"
+                style="@style/OutlinedInputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/business_register_number_textfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Business Register Number"
+                    android:padding="@dimen/padding_medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- GSTIN Field -->
+        <LinearLayout
+            android:id="@+id/gstin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/business_register_number_layout"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gstin"
+                style="@style/OutlinedInputField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/gstin_textfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter GSTIN"
+                    android:padding="@dimen/padding_medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/business_file_uploads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/gstin_layout"
+            >
+
+            <!-- Business Logo Upload Container -->
+            <LinearLayout
+                android:id="@+id/business_logo_upload"
+                style="@style/FileUploadContainerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Upload Icon (Left) -->
+                <ImageView
+                    android:id="@+id/uploadIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_background"
+                    android:contentDescription="Upload Icon"
+                    android:src="@mipmap/image_upload_icon" />
+
+                <!-- Right Container for Text & Button -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Row 1: Upload Hint Text -->
+                    <TextView
+                        android:id="@+id/uploadHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please Upload Your Business Logo"
+
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Row 2: Browse File Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBrowseFile"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Browse File" />
+
+                    <!-- Row 3: Selected File Name -->
+                    <TextView
+                        android:id="@+id/uploadedImageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="No file selected"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Business License Upload Container -->
+            <LinearLayout
+                android:id="@+id/business_license_upload"
+                style="@style/FileUploadContainerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Upload Icon (Left) -->
+                <ImageView
+                    android:id="@+id/uploadFileIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_background"
+                    android:contentDescription="Upload Icon"
+                    android:src="@mipmap/file_upload_icon" />
+
+                <!-- Right Container for Text & Button -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Row 1: Upload Hint Text -->
+                    <TextView
+                        android:id="@+id/uploadFileHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please Upload Your Business License"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                    <!-- Row 2: Browse File Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBrowseFileFile"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Browse File" />
+
+                    <!-- Row 3: Selected File Name -->
+                    <TextView
+                        android:id="@+id/uploadedFileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="No file selected"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business_file_uploads" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

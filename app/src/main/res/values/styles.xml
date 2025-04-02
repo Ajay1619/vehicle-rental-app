@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OutlinedInputField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <!-- Background and text styles -->
+        <item name="boxBackgroundColor">@color/colorSurface</item> <!-- Background color -->
+        <item name="hintTextColor">@color/textPrimary</item> <!-- Hint text color -->
+        <item name="android:textColorHint">@color/textSecondary</item> <!-- Color for the hint -->
+        <item name="android:textColor">@color/textPrimary</item> <!-- Text color -->
+        <!-- Elevation for shadow -->
+        <item name="android:elevation">4dp</item>
+
+        <item name="boxCornerRadiusTopStart">@dimen/border_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/border_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/border_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/border_large</item>
+        <!-- Focusable behavior -->
+        <item name="android:focusableInTouchMode">true</item>
+
+    </style>
+
+    <!--    autocomplete style -->
+    <style name="OutlinedAutoCompleteTextField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <!-- Background and text styles -->
+        <item name="boxBackgroundColor">@color/colorSurface</item> <!-- Background color -->
+        <item name="hintTextColor">@color/textPrimary</item> <!-- Hint text color -->
+        <item name="android:textColorHint">@color/textSecondary</item> <!-- Color for the hint -->
+        <item name="android:textColor">@color/textPrimary</item> <!-- Text color -->
+
+        <!-- Elevation for shadow -->
+        <item name="android:elevation">4dp</item>
+
+        <!-- Corner radius -->
+        <item name="boxCornerRadiusTopStart">@dimen/border_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/border_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/border_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/border_large</item>
+
+        <!-- Focusable behavior -->
+        <item name="android:focusableInTouchMode">true</item>
+
+        <!-- Dropdown menu styling -->
+        <item name="android:popupElevation">6dp</item>
+        <item name="android:popupBackground">@drawable/dropdown_background</item>
+    </style>
+
+    <!-- Style for the AutoCompleteTextView inside the TextInputLayout -->
+    <style name="AutoCompleteTextViewStyle">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="ToolbarStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:titleTextColor">@color/textPrimary</item>
+        <item name="android:subtitleTextColor">@color/textSecondary</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="ButtonStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonText</item>
+    </style>
+
+    <style name="ButtonDisabledStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/buttonDisabledBackground</item>
+        <item name="android:textColor">@color/buttonDisabledText</item>
+    </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="FileUploadContainerStyle">
+        <!-- Match or wrap content as needed -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <!-- Outer margin and inner padding -->
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:padding">16dp</item>
+
+        <!-- Apply dashed background -->
+        <item name="android:background">@drawable/fileupload_dashed_background</item>
+
+        <!-- Center content horizontally and vertically -->
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="Widget.App">
+        <!-- Example: setting default background and text color -->
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="Widget">
+        <!-- Example: Setting a default background color and text color -->
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <!-- Define TextAppearance style for TextView -->
+    <style name="TextAppearance" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+
+    <!-- TextView Styles -->
+    <style name="TextViewPrimary" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="TextViewSecondary" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <!-- Snackbar Style -->
+    <style name="SnackbarStyle" parent="Widget.Material3.Snackbar">
+        <item name="android:background">@color/snackbarBackground</item>
+        <item name="android:textColor">@color/snackbarText</item>
+    </style>
+
+    <!-- Tab Layout Style -->
+    <style name="TabLayoutStyle" parent="Widget.Material3.TabLayout">
+        <item name="tabSelectedTextColor">@color/tabSelected</item>
+        <item name="tabTextColor">@color/tabUnselected</item>
+        <item name="tabIndicatorColor">@color/tabIndicator</item>
+    </style>
+
+    <!-- Dialog Style -->
+    <style name="DialogStyle" parent="Theme.Material3.Light.Dialog">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/colorSurface</item>
+    </style>
+
+    <style name="Widget.App.Button">
+        <item name="android:background">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonText</item>
+    </style>
+
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ImageRoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/border_small</item>
+    </style>
+
+</resources>

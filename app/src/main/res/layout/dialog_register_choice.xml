@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_medium"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How Do You Wish To Continue?"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="@dimen/margin_small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/padding_extra_small">
+
+        <!-- Vertical Stack for Vendor & Customer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/padding_extra_small"
+>
+
+            <!-- Vendor Layout -->
+            <LinearLayout
+                android:id="@+id/llVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/loading_background"
+                android:padding="@dimen/padding_medium"
+                android:elevation="@dimen/elevation_small"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:layout_marginBottom="@dimen/margin_large">  <!-- Space between Vendor & Customer -->
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/add_vehicle"
+                    android:contentDescription="Vendor"
+                    android:layout_marginEnd="@dimen/margin_medium"/>  <!-- Space between image and text -->
+
+                <TextView
+                    android:id="@+id/tvVendor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vendor"
+                    android:textSize="18sp"
+                    android:textColor="@color/textPrimary"/>
+            </LinearLayout>
+
+            <!-- Customer Layout -->
+            <LinearLayout
+                android:id="@+id/llDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/loading_background"
+                android:padding="@dimen/padding_medium"
+
+                android:layout_margin="@dimen/margin_extra_small"
+                android:elevation="@dimen/elevation_small">
+
+                <TextView
+                    android:id="@+id/tvCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer"
+                    android:textSize="18sp"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginEnd="@dimen/margin_medium"/>
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/registration_customer"
+                    android:contentDescription="Customer"
+    />  <!-- Space between image and text -->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

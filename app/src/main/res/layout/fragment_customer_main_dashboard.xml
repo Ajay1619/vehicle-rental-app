@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CustomerMainDashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ImageView to display the cached profile image -->
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="1dp"
+            android:background="@drawable/profile_image_background"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <!-- TextView for User ID -->
+        <TextView
+            android:id="@+id/tvUserId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/TextAppearance"
+            android:text="User ID: " />
+
+        <!-- TextView for Account ID -->
+        <TextView
+            android:id="@+id/tvAccountId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance"
+            android:text="Account ID: " />
+
+        <!-- TextView for Account Code -->
+        <TextView
+            android:id="@+id/tvAccountCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance"
+            android:text="Account Code: " />
+
+        <!-- TextView for Name -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance"
+            android:text="Name: " />
+
+        <!-- TextView for Image URL -->
+        <TextView
+            android:id="@+id/tvImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance"
+            android:text="Image URL: " />
+
+    </LinearLayout>
+
+</FrameLayout>

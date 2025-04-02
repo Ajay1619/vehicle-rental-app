@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_corner_radius_large"
+    app:cardBackgroundColor="@color/colorSurface"
+    app:cardElevation="@dimen/elevation_extra_large"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_small"
+        android:gravity="center">
+
+    <ImageView
+        android:id="@+id/delete_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/vehicle_delete"
+        android:contentDescription="Delete Icon"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/delete_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete this vehicle?"
+        android:textSize="18sp"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textAlignment="center"
+        android:maxWidth="260dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:gravity="center">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="@color/textPrimary"
+        app:strokeColor="@color/textPrimary"
+        android:layout_marginEnd="@dimen/margin_medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorError" />
+</LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>

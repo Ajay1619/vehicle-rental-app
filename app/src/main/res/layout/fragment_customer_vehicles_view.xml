@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/customer_vehicles_list">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/customer_add_new_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:elevation="@dimen/elevation_medium"
+                android:layout_margin="@dimen/margin_small"
+                android:padding="@dimen/padding_small">
+
+                <!-- Row Layout for Counts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_margin="@dimen/margin_small"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Share Your Wheels"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_large"
+                            android:textColor="@color/colorTertiary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Turn Miles into Money!"
+                            android:textSize="@dimen/font_size_extra_small"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin_small"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Vehicle"
+                            android:textSize="@dimen/font_size_extra_small"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:background="@drawable/badge_background"/>
+
+                    </LinearLayout>
+
+
+                    <!-- Inactive Vehicles -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/adws"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@mipmap/add_vehicle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:elevation="@dimen/elevation_medium"
+                android:layout_margin="@dimen/margin_small"
+                android:padding="@dimen/padding_small">
+
+                <!-- Row Layout for Counts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/totalVehiclesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            style="@style/TextAppearance"/>
+
+                        <TextView
+                            android:id="@+id/totalVehiclesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total\nVehicles"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:breakStrategy="simple"
+                            android:textColor="@color/textSecondary"/>
+                    </LinearLayout>
+
+                    <!-- Active Vehicles -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/activeVehiclesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            style="@style/TextAppearance"/>
+
+                        <TextView
+                            android:id="@+id/activeVehiclesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Active\nVehicles"
+                            android:textColor="@color/textSecondary"
+                            android:maxLines="2"
+                            android:breakStrategy="simple"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Inactive Vehicles -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/inactiveVehiclesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:breakStrategy="simple"
+                            style="@style/TextAppearance"/>
+
+                        <TextView
+                            android:id="@+id/inactiveVehiclesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Inactive\nVehicles"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/textSecondary"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- TABS -->
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabTextColor="@color/textPrimary"
+                    app:tabSelectedTextColor="@color/colorTertiary"
+                    android:background="@color/colorSurface"
+                    app:tabIndicatorHeight="4dp">
+
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motor Bikes"/>
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cars"/>
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_inactive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bi-Cycles"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+            <!-- Inside ScrollView after TabLayout -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vehiclesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+</LinearLayout>

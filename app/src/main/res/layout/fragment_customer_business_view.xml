@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CustomerBusinessViewFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingHorizontal="@dimen/padding_medium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center">
+
+            <!-- Business Logo -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/profile_image_background"
+                android:src="@mipmap/profile_pic_placeholder"
+                android:padding="1dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/businessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance"
+                android:text="Business Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <TextView
+                android:id="@+id/customerContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance"
+                android:text="Contact Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/padding_medium">
+
+                <!-- Section Title -->
+                <TextView
+                    android:text="Firm Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"/>
+
+                <!-- Two-Column Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <!-- Column 1: Business Type -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBusinessName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Business Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBusinessName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Brain Storm Info Tech"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                    <!-- Column 2: Registration Number -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBusinessRegisterName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Register Number"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBusinessRegisterNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC123DEF567"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <!-- Column 1: Business Type -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBusinessGSTIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="GSTIN"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueGSTIN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC123DEF456"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/padding_medium">
+
+                <!-- Section Title -->
+                <TextView
+                    android:text="Personal Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"/>
+
+                <!-- Two-Column Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <!-- Column 1: Business Type -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelPersonalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Contact Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valuePersonalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ajay"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                    <!-- Column 2: Registration Number -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelPersonalContactNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Contact Number"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valuePersonalContactNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9876543210"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <!-- Column 1: Business Type -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelPersonalEmailId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Email ID"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valuePersonalEmailId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="company@gmail.com"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/padding_medium">
+
+                <!-- Section Title -->
+                <TextView
+                    android:text="Address Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"/>
+
+                <!-- Two-Column Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="No."
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                    <!-- Column 2: Registration Number -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressStreetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Street Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressStreetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VOC Street"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressLocality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Locality"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressLocality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shanthi Nagar"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="City"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lawspet"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressDistrict"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="District"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressDistrict"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Puducherry"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="State"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pondicherry"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Country"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="India"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelAddressPinCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Pin Code"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueAddressPinCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="605008"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/loading_background"
+                android:backgroundTint="@color/colorBackground"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/padding_medium">
+
+                <!-- Section Title -->
+                <TextView
+                    android:text="Bank Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"/>
+
+                <!-- Two-Column Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBankHolderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Account Holder Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBankHolderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AJAY S"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                    <!-- Column 2: Registration Number -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Bank Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mariamman Indian Bank"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBankBranchName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="Branch Name"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBankBranchName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lawspet (ECR)"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBankIFSCCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="IFSC Code"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBankIFSCCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MIB00224411"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/labelBankUPINumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance"
+                            android:text="UPI Number"
+                            android:textSize="@dimen/font_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/valueBankUPINumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mariammanabcdefgh2000@oksbi"
+                            android:textSize="@dimen/font_size_small"
+                            android:textColor="@color/textSecondary"
+                            android:paddingTop="@dimen/padding_extra_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

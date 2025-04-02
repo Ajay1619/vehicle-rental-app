@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/border_small"
+    app:cardElevation="@dimen/elevation_medium"
+    app:cardBackgroundColor="@color/colorBackground"
+    android:layout_margin="@dimen/margin_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/vehicleImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/vehicles"
+            app:shapeAppearanceOverlay="@style/ImageRoundedCorners" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/brandName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:textColor="@color/textPrimary"
+                android:padding="@dimen/padding_extra_small"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vehicleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Name"
+                android:textColor="@color/textPrimary"
+                android:padding="@dimen/padding_extra_small"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vehicleModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textColor="@color/textPrimary"
+                android:padding="@dimen/padding_extra_small"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Switch
+                android:id="@+id/activeToggle"
+                android:padding="@dimen/padding_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTertiary"/>
+
+            <ImageView
+                android:id="@+id/editButton"
+                android:padding="@dimen/padding_small"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/vehicle_edit" />
+            <ImageView
+                android:id="@+id/deleteButton"
+                android:padding="@dimen/padding_small"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/delete_icon" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
